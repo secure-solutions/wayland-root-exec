@@ -1,0 +1,8 @@
+#! /bin/bash
+echo "[INFO] Grant access"
+xhost +si:localuser:root
+sudo $1
+echo "[INFO] Revoke access"
+xhost -si:localuser:root
+echo ""
+echo "ready."
